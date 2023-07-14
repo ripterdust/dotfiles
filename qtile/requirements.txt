@@ -1,0 +1,5 @@
+dunst
+picom
+feh 
+nm-applet
+slack
