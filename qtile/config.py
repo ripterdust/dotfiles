@@ -1,7 +1,6 @@
-from libqtile import bar, layout, widget, extension, hook
-from libqtile.config import Click, Drag, Group, Key, Screen, Match
+from libqtile import bar, layout
+from libqtile.config import Click, Drag, Key, Screen, Match
 from libqtile.lazy import lazy
-from qtile_extras import widget as extra
 from modules.groups import groups, get_group_key
 from modules.keys import keybindings
 from modules.bar import getWidgets, size, margin

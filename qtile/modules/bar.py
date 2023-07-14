@@ -83,20 +83,21 @@ def getWidgets():
         ),
         left_arrow(nord_fox['orange'], gruvbox['blue']),
         PulseVolume(background=gruvbox['blue']),
-        left_arrow(gruvbox['blue'], nord_fox['black']),
-        Clock(
-            background=nord_fox['black'],
-            foreground=nord_fox['white'],
-            format='\uf017 %a %I:%M %p %d/%m/%Y'
-        ),
+        left_arrow(gruvbox['blue'], gruvbox['yellow']),
         widget.KeyboardLayout(
             fmt='Keyboard: {}',
             padding=5,
-            background=nord_fox['black'],
-            foreground=nord_fox['white'],
+            background=gruvbox['yellow'],
+            foreground=nord_fox['black'],
             configured_keyboards=['latam']
         ),
-        left_arrow(nord_fox['black'], nord_fox['red']),
+        left_arrow(gruvbox['yellow'], nord_fox['blue']),
+        Clock(
+            background=nord_fox['blue'],
+            foreground=nord_fox['black'],
+            format='\uf017 %a %I:%M %p %d/%m/%Y'
+        ),
+        left_arrow(nord_fox['blue'], nord_fox['red']),
         QuickExit(default_text="󰤆", countdown_format="{}",
                   fontsize=17, background=nord_fox['red']),
         Spacer(length=5, background=nord_fox['red']),
