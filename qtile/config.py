@@ -9,6 +9,7 @@ from modules.colors import nord_fox
 
 import os
 
+
 def init_colors():
     return [["#282c34", "#282c34"],
             ["#1c1f24", "#1c1f24"],
@@ -116,12 +117,10 @@ wmname = "LG3D"
 wmname = "Bryan"
 
 commands = [
-    'setxkbmap latam',
     'feh --bg-fill ~/.config/qtile/wallpaper.jpg',
     'picom --config ~/.config/picom/picom.conf &',
     'dunst -conf /home/jorge/.config/dunst/qtilerc &',
     'nm-applet &',
-    'slack'
 ]
 
 for command in commands:

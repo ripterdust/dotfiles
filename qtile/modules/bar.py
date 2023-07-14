@@ -11,10 +11,11 @@ from libqtile.widget.net import Net
 from libqtile.widget.battery import Battery
 from libqtile.widget.quick_exit import QuickExit
 from libqtile.widget.pulse_volume import PulseVolume
-from libqtile.widget.statusnotifier import StatusNotifier
 from libqtile.widget.backlight import Backlight
 from libqtile.widget.chord import Chord
 from libqtile.widget.notify import Notify
+from libqtile.widget.statusnotifier import StatusNotifier
+from qtile_extras import widget
 
 from .unicodes import left_half_circle, right_arrow, left_arrow, right_half_circle
 from .colors import nord_fox, gruvbox
@@ -37,6 +38,7 @@ def getWidgets():
 
         ),
         right_arrow(nord_fox['red'], nord_fox['bg']),
+
         CurrentLayout(
             background=nord_fox['red'],
             foreground=nord_fox['white'],
@@ -87,10 +89,19 @@ def getWidgets():
             foreground=nord_fox['white'],
             format='\uf017 %a %I:%M %p %d/%m/%Y'
         ),
+        widget.KeyboardLayout(
+            fmt='Keyboard: {}',
+            padding=5,
+            background=nord_fox['black'],
+            foreground=nord_fox['white'],
+            configured_keyboards=['latam']
+        ),
         left_arrow(nord_fox['black'], nord_fox['red']),
         QuickExit(default_text="󰤆", countdown_format="{}",
                   fontsize=17, background=nord_fox['red']),
-        Spacer(length=5, background=nord_fox['red'])
+        Spacer(length=5, background=nord_fox['red']),
+
+
     ]
 
     return statusWidgets
