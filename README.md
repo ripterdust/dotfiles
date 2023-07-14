@@ -1,3 +1,3 @@
 # Bryan Arevalo's dotfiles
 
-!(./images/wallpaper.png)
+!["Imagen de prueba"](./images/wallpaper.png)
