@@ -56,9 +56,9 @@ def getWidgets():
             background=nord_fox['bg'],
             foreground=nord_fox['fg'],
         ),
-        left_arrow(nord_fox['bg'], nord_fox['black']),
         Notify(
         ),
+        left_arrow(nord_fox['bg'], nord_fox['black']),
         CPU(
             format=' {freq_current}GHz {load_percent}%',
             background=nord_fox['black'],
