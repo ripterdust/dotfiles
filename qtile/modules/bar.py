@@ -18,25 +18,27 @@ from libqtile.widget.statusnotifier import StatusNotifier
 from qtile_extras import widget
 
 from .unicodes import left_half_circle, right_arrow, left_arrow, right_half_circle
-from .colors import nord_fox, gruvbox
+from .colors import nord_fox, gruvbox, dracula
 
 BAR_HEIGHT = 28
 
+notifications = Notify()
+windows = GroupBox(
+    disable_drag=True,
+    active=nord_fox['red'],
+    inactive=nord_fox['black'],
+    highlight_method='line',
+    block_highlight_text_color=nord_fox['fg_gutter'],
+    borderwidth=0,
+    highlight_color=nord_fox['bg'],
+    background=nord_fox['bg'],
+    spacing=2
+
+)
 
 def getWidgets():
     statusWidgets = [
-        GroupBox(
-            disable_drag=True,
-            active=nord_fox['red'],
-            inactive=nord_fox['black'],
-            highlight_method='line',
-            block_highlight_text_color=nord_fox['fg_gutter'],
-            borderwidth=0,
-            highlight_color=nord_fox['bg'],
-            background=nord_fox['bg'],
-            spacing=2
-
-        ),
+        windows,
         right_arrow(nord_fox['red'], nord_fox['bg']),
 
         CurrentLayout(
@@ -56,8 +58,7 @@ def getWidgets():
             background=nord_fox['bg'],
             foreground=nord_fox['fg'],
         ),
-        Notify(
-        ),
+        notifications,
         left_arrow(nord_fox['bg'], nord_fox['black']),
         CPU(
             format=' {freq_current}GHz {load_percent}%',

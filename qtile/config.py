@@ -4,7 +4,7 @@ from libqtile.lazy import lazy
 from modules.groups import groups, get_group_key
 from modules.keys import keybindings
 from modules.bar import getWidgets, size, margin
-from modules.colors import nord_fox
+from modules.colors import nord_fox, dracula
 
 import os
 
@@ -60,7 +60,7 @@ widget_defaults = dict(
     font="Fira Code Nerd Font",
     fontsize=12,
     padding=6,
-    background=nord_fox['bg'],
+    background=dracula['bg'],
 )
 extension_defaults = widget_defaults.copy()
 
