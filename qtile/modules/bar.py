@@ -10,15 +10,18 @@ from libqtile.widget.memory import Memory
 from libqtile.widget.net import Net
 from libqtile.widget.battery import Battery
 from libqtile.widget.quick_exit import QuickExit
-from libqtile.widget.pulse_volume import PulseVolume
 from libqtile.widget.backlight import Backlight
 from libqtile.widget.chord import Chord
 from libqtile.widget.notify import Notify
 from libqtile.widget.statusnotifier import StatusNotifier
+from libqtile.widget.check_updates import CheckUpdates
+
+# from libqtile import widget
+
 from qtile_extras import widget
 
-from .unicodes import left_half_circle, right_arrow, left_arrow, right_half_circle
-from .colors import nord_fox, gruvbox, dracula
+from .unicodes import right_arrow, left_arrow
+from .colors import nord_fox, gruvbox
 
 BAR_HEIGHT = 28
 
@@ -83,7 +86,14 @@ def getWidgets():
             format='Battery \uf240  {percent:2.0%}'
         ),
         left_arrow(nord_fox['orange'], gruvbox['blue']),
-        PulseVolume(background=gruvbox['blue']),
+        # widget.PulseVolume(background=gruvbox['blue']),
+        CheckUpdates(
+            background=gruvbox['blue'], 
+            distro="Fedora", 
+            no_update_string="No updates",
+            display_format="Updates: {updates}",
+            execute="sudo dnf update"
+        ),
         left_arrow(gruvbox['blue'], gruvbox['yellow']),
         widget.KeyboardLayout(
             fmt='Keyboard: {}',
