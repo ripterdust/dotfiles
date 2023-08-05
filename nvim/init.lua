@@ -12,7 +12,14 @@ vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
+vim.cmd 'set termguicolors'
+
+vim.cmd [[
+  hi StatusLine guibg=#282a36 guifg=#f8f8f2
+  hi StatusLineNC guibg=#282a36 guifg=#6272a4
+]]
+
 require ('core.keymaps')
 require('core.plugins')
 require('core.pluginConfig.init')
-
+require('core.configuration')
