@@ -16,7 +16,7 @@ from libqtile.widget.notify import Notify
 from libqtile.widget.statusnotifier import StatusNotifier
 from libqtile.widget.check_updates import CheckUpdates
 
-# from libqtile import widget
+from libqtile import widget
 
 from qtile_extras import widget
 
@@ -39,11 +39,11 @@ windows = GroupBox(
 
 )
 
+
 def getWidgets():
     statusWidgets = [
         windows,
         right_arrow(nord_fox['red'], nord_fox['bg']),
-
         CurrentLayout(
             background=nord_fox['red'],
             foreground=nord_fox['white'],
@@ -62,37 +62,23 @@ def getWidgets():
             foreground=nord_fox['fg'],
         ),
         notifications,
-        left_arrow(nord_fox['bg'], nord_fox['black']),
-        CPU(
-            format=' {freq_current}GHz {load_percent}%',
-            background=nord_fox['black'],
-            foreground=nord_fox['white']
-        ),
-        Memory(
-            format='󱦟{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
-            background=nord_fox['black'],
-            foreground=nord_fox['cyan']
-        ),
         Chord(chords_colors={
             "launch": ("#ff0000", "#ffffff"),
         },
             name_transform=lambda name: name.upper()),
-
-        left_arrow(nord_fox['black'], nord_fox['blue']),
-        StatusNotifier(background=nord_fox['blue']),
-        left_arrow(nord_fox['blue'], nord_fox['orange']),
+        left_arrow(nord_fox['bg'], nord_fox['orange']),
         Battery(
             background=nord_fox['orange'],
             format='Battery \uf240  {percent:2.0%}'
         ),
-        left_arrow(nord_fox['orange'], gruvbox['blue']),
-        # widget.PulseVolume(background=gruvbox['blue']),
+        left_arrow(nord_fox['orange'], gruvbox['yellow']),
+        widget.PulseVolume(background=gruvbox['yellow']),
+        left_arrow(gruvbox['yellow'], gruvbox['blue']),
         CheckUpdates(
-            background=gruvbox['blue'], 
-            distro="Fedora", 
+            background=gruvbox['blue'],
+            distro="Arch",
             no_update_string="No updates",
             display_format="Updates: {updates}",
-            execute="sudo dnf update"
         ),
         left_arrow(gruvbox['blue'], gruvbox['yellow']),
         widget.KeyboardLayout(

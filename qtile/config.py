@@ -111,15 +111,14 @@ auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
 auto_minimize = True
-wmname = "LG3D"
-
 wmname = "Bryan"
 
 commands = [
     'feh --bg-fill ~/.config/qtile/wallpaper.jpg',
     'picom --config ~/.config/picom/picom.conf &',
-    'dunst -conf /home/jorge/.config/dunst/qtilerc &',
     'nm-applet &',
+    'setxkbmap latam',
+    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
 ]
 
 for command in commands:

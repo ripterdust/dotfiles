@@ -4,7 +4,7 @@ from libqtile.lazy import lazy
 mod = "mod4"
 terminal = "alacritty"
 
-
+unmute = 'pactl set-sink-mute @DEFAULT_SINK@ false;'
 keybindings = [
         Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
@@ -38,11 +38,11 @@ keybindings = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawn("rofi -show drun -show-icons"), desc="Spawn Rofi"),
     Key([mod], 'Print', lazy.spawn('gnome-screenshot -i')),
-    Key([], 'XF86AudioMute', lazy.spawn('amixer -D pulse set Master toggle')),
+    Key([], 'XF86AudioMute', lazy.spawn('pactl set-sink-mute @DEFAULT_SINK@ toggle')),
     Key([], 'XF86AudioLowerVolume', lazy.spawn(
-        'amixer -D pulse set Master 5%- unmute')),
+        'pactl set-sink-volume @DEFAULT_SINK@ -5%')),
     Key([], 'XF86AudioRaiseVolume', lazy.spawn(
-        'amixer -D pulse set Master 5%+ unmute')),
+        'pactl set-sink-volume @DEFAULT_SINK@ +5%')),
     Key([], 'XF86MonBrightnessUp', lazy.spawn('brightnessctl set +10%')),
-    Key([], 'XF86MonBrightnessDown', 'brightnessctl set 10%-')
+    Key([], 'XF86MonBrightnessDown', lazy.spawn('brightnessctl set 10%-')),
 ]
