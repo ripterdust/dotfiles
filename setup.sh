@@ -27,6 +27,10 @@ echo "Configuring rofi..."
 rm -rf ~/.config/rofi
 cp -r rofi ~/.config/rofi
 
+echo "Configuring scripts..."
+cp -r scripts ~/.local/bin
+sudo chmod +x ~/.local/bin/scripts/*
+
 
 
 
