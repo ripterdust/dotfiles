@@ -7,9 +7,10 @@
 * picom
 * feh
 * nm-applet
+* polybar
 * slack
 
 # Arch instalation
 ```
-    $ sudo pacman -Sy dunst picom feh networkmanager
+    $ sudo pacman -Sy dunst picom feh networkmanager polybar
 ```
