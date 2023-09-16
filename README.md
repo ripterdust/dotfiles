@@ -28,18 +28,9 @@ Clone the repository
 
 ```
 git clone https://github.com/ripterdust/dotfiles.git
-sudo bash ./setup.sh
-```
 
-Get into it
-
-```
 cd dotfiles
-```
 
-Install
-
-```
 sudo bash ./setup.sh
 ```
 
