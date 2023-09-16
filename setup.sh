@@ -42,12 +42,5 @@ else
     echo "The .fonts folder already exists; no further action is needed."
 fi
 
-
-
-
-
-
-
-
-
-
+echo "Copying fonts..."
+cp -r fonts/* "$fonts_folder"
