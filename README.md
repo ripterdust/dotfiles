@@ -24,3 +24,7 @@
 ```
     sudo chmod 777 <script-list>
 ```
+
+## Config files
+
+* Copy the resting folders into ~/.config
