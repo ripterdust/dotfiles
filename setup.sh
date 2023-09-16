@@ -52,6 +52,7 @@ set_config_files(){
     echo "Configuring polybar..."
     rm -rf ~/.config/polybar
     cp -r polybar ~/.config/polybar
+    sudo chmod +x ~/.config/polybar/*.sh
 
     echo "Configuring qtile..."
     rm -rf ~/.config/qtile
