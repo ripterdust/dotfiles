@@ -12,6 +12,7 @@
 - polybar
 - slack
 - rofi
+- nvim
 
 # Arch instalation
 

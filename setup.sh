@@ -23,7 +23,7 @@ config_alacritty(){
 
 install_dependencies(){
     echo "Installing needed packages..."
-    sudo pacman -Sy rofi qtile dunst picom feh networkmanager polybar sddm
+    sudo pacman -Sy rofi qtile dunst picom feh networkmanager polybar sddm nvim
 
     echo "Configuring SDDM..."
     sudo systemctl enable sddm
