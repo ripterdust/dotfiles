@@ -17,7 +17,7 @@
 # Arch instalation
 
 ```
-$ sudo pacman -Sy rofi qtile dunst picom feh networkmanager polybar
+$ sudo pacman -Sy qtile dunst picom feh networkmanager polybar rofi nvim
 ```
 
 # Setup
