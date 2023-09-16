@@ -24,8 +24,23 @@ $ sudo pacman -Sy qtile dunst picom feh networkmanager polybar rofi nvim
 
 ### automatically
 
+Clone the repository
+
 ```
-$ sudo bash ./setup.sh
+git clone https://github.com/ripterdust/dotfiles.git
+sudo bash ./setup.sh
+```
+
+Get into it
+
+```
+cd dotfiles
+```
+
+Install
+
+```
+sudo bash ./setup.sh
 ```
 
 ## Scripts
