@@ -44,3 +44,6 @@ fi
 
 echo "Copying fonts..."
 cp -r fonts/* "$fonts_folder"
+
+echo "Installing needed packages..."
+sudo pacman -Sy rofi qtile dunst picom feh networkmanager polybar
