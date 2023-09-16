@@ -73,5 +73,7 @@ config_alacritty(){
     cd ..
 }
 
+
+
 setxkbmap latam
 
