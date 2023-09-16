@@ -33,6 +33,17 @@ echo "Configuring scripts..."
 cp -r scripts ~/.local/bin
 sudo chmod +x ~/.local/bin/scripts/*
 
+fonts_folder="$HOME/.fonts"
+
+if [ ! -d "$fonts_folder" ]; then
+    echo "Creating the fonts folder..."
+    mkdir -p "$fonts_folder"
+else
+    echo "The .fonts folder already exists; no further action is needed."
+fi
+
+
+
 
 
 
