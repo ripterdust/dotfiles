@@ -81,9 +81,5 @@ set_config_files(){
 
 set_config_files
 
-
-
-
-
 setxkbmap latam
 
