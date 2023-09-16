@@ -1,6 +1,6 @@
 # Bryan Arevalo's dotfiles
 
-!["Imagen de prueba"](./images/wallpaper.png)
+!["Imagen de prueba"](./images/cover.png)
 
 # Needed packages
 
