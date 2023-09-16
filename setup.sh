@@ -6,6 +6,8 @@ cp -r alacritty ~/.config/alacritty
 echo "Configuring dunst..."
 rm -rf ~/.config/dunst
 cp -r dunst ~/.config/dunst
+killall dunst
+dunst &
 
 echo "Configuring nvim..."
 rm -rf ~/.config/nvim
