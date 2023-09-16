@@ -2,7 +2,8 @@
 
 !["Imagen de prueba"](./images/wallpaper.png)
 
-# Needed packates
+# Needed packages
+* qtile
 * Dunst
 * picom
 * feh
@@ -12,7 +13,7 @@
 
 # Arch instalation
 ```
-    $ sudo pacman -Sy dunst picom feh networkmanager polybar
+    $ sudo pacman -Sy qtile dunst picom feh networkmanager polybar
 ```
 
 # Setup
