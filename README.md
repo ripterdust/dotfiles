@@ -10,10 +10,10 @@
 * nm-applet
 * polybar
 * slack
-
+* rofi
 # Arch instalation
 ```
-    $ sudo pacman -Sy qtile dunst picom feh networkmanager polybar
+    $ sudo pacman -Sy rofi qtile dunst picom feh networkmanager polybar
 ```
 
 # Setup
