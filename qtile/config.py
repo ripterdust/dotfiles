@@ -1,4 +1,4 @@
-from libqtile import bar, layout
+from libqtile import bar, layout, hook
 from libqtile.config import Click, Drag, Key, Screen, Match
 from libqtile.lazy import lazy
 from modules.groups import groups, get_group_key
@@ -6,6 +6,7 @@ from modules.keys import keybindings
 from modules.bar import getWidgets, size, margin
 from modules.colors import nord_fox, dracula
 
+import subprocess
 import os
 
 
@@ -67,10 +68,10 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top=bar.Bar([*getWidgets()], size=size, margin=margin),
+        # top=bar.Bar([*getWidgets()], size=size, margin=margin),
     ),
     Screen(
-        top=bar.Bar([*getWidgets()], size=size, margin=margin),
+        # top=bar.Bar([*getWidgets()], size=size, margin=margin),
     )
 ]
 
@@ -113,12 +114,15 @@ reconfigure_screens = True
 auto_minimize = True
 wmname = "Bryan"
 
+
 commands = [
     'feh --bg-fill ~/.config/qtile/wallpaper.jpg',
     'picom --config ~/.config/picom/picom.conf &',
     'nm-applet &',
     'setxkbmap latam',
-    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
+    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &",
+    "polybar first &",
+    "polybar second &",
 ]
 
 for command in commands:
